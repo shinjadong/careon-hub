@@ -23,13 +23,13 @@ app.add_middleware(
 )
 
 # API 라우터 등록
-from app.api import devices, personas
+from app.api import devices, personas, campaigns
 
 app.include_router(devices.router)
 app.include_router(personas.router)
+app.include_router(campaigns.router)
 
 # TODO: 추가 라우터
-# app.include_router(campaigns.router)
 # app.include_router(monitoring.router)
 
 
