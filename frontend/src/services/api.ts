@@ -17,18 +17,18 @@ export const healthApi = {
 
 // Campaigns API
 export const campaignsApi = {
-  list: () => api.get('/api/campaigns'),
+  list: (params?: any) => api.get('/api/campaigns', { params }),
   get: (id: string) => api.get(`/api/campaigns/${id}`),
   create: (data: any) => api.post('/api/campaigns', data),
-  execute: (id: string, data: any) => api.post(`/api/campaigns/${id}/execute`, data),
+  execute: (data: any) => api.post('/api/campaigns/execute', data),
   stats: (id: string) => api.get(`/api/campaigns/${id}/stats`)
 };
 
 // Personas API
 export const personasApi = {
-  list: () => api.get('/api/personas'),
+  list: (params?: any) => api.get('/api/personas', { params }),
   get: (id: string) => api.get(`/api/personas/${id}`),
-  soulSwap: (id: string, data: any) => api.post(`/api/personas/${id}/soul-swap`, data)
+  soulSwap: (id: string, data: any) => api.post('/api/personas/soul-swap', data)
 };
 
 // Devices API
