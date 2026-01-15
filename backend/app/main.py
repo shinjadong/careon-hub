@@ -22,12 +22,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# TODO: API 라우터 등록
-# app.include_router(campaigns.router, prefix="/api/campaigns", tags=["campaigns"])
-# app.include_router(personas.router, prefix="/api/personas", tags=["personas"])
-# app.include_router(devices.router, prefix="/api/devices", tags=["devices"])
-# app.include_router(monitoring.router, prefix="/api/monitoring", tags=["monitoring"])
-# app.include_router(websocket.router, prefix="/ws", tags=["websocket"])
+# API 라우터 등록
+from app.api import devices
+
+app.include_router(devices.router)
+
+# TODO: 추가 라우터
+# app.include_router(personas.router)
+# app.include_router(campaigns.router)
+# app.include_router(monitoring.router)
 
 
 @app.get("/")
