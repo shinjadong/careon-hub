@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-01-15T18:58:33.495355",
+  "tests": [
+    {
+      "name": "Backend Health Check",
+      "status": "passed",
+      "message": "Service: careon-hub",
+      "details": {}
+    },
+    {
+      "name": "Frontend Server",
+      "status": "passed",
+      "message": "HTTP 200 OK",
+      "details": {}
+    },
+    {
+      "name": "Supabase Connection",
+      "status": "passed",
+      "message": "Connected, 4 personas available",
+      "details": {}
+    },
+    {
+      "name": "DeviceService",
+      "status": "passed",
+      "message": "Found 1 device(s)",
+      "details": {
+        "device_id": "R3CW60BHSAT",
+        "model": "SM-S916N"
+      }
+    },
+    {
+      "name": "PersonaService - List",
+      "status": "passed",
+      "message": "Retrieved 5/5 personas",
+      "details": {}
+    },
+    {
+      "name": "PersonaService - Get",
+      "status": "passed",
+      "message": "Retrieved persona: 자영업자_50대_대전",
+      "details": {}
+    },
+    {
+      "name": "CampaignService - Create",
+      "status": "passed",
+      "message": "Created campaign: 통합테스트 캠페인",
+      "details": {
+        "campaign_id": "dd4b9097-a8d9-46d5-8ed6-62c280824cb0"
+      }
+    },
+    {
+      "name": "CampaignService - List",
+      "status": "passed",
+      "message": "Found 1 campaigns (in-memory)",
+      "details": {}
+    },
+    {
+      "name": "CampaignService - Stats",
+      "status": "passed",
+      "message": "Retrieved stats: 0 executions",
+      "details": {}
+    },
+    {
+      "name": "CampaignService - Execute",
+      "status": "skipped",
+      "message": "Requires Supabase persona + ADB device + Soul Swap setup",
+      "details": {}
+    },
+    {
+      "name": "API: GET /api/devices/",
+      "status": "passed",
+      "message": "Response OK",
+      "details": {}
+    },
+    {
+      "name": "API: GET /api/personas/",
+      "status": "passed",
+      "message": "Response OK",
+      "details": {}
+    },
+    {
+      "name": "API: GET /api/campaigns/",
+      "status": "passed",
+      "message": "Response OK",
+      "details": {}
+    }
+  ],
+  "summary": {
+    "total": 13,
+    "passed": 12,
+    "failed": 0,
+    "skipped": 1
+  }
+}
